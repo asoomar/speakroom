@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Horizons Facebook</title>
+    <!-- CSS files for Bootstrap -->
+    <!-- UNCOMMENT IF NEEDED -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Your css file -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body id = "bodyBack">
+    <!-- YOUR CODE HERE -->
+    <div class = "container-fluid">
+      <!-- Registration Screen -->
+      <h1 class = "col-xs-4 col-xs-offset-4 text-center">SpeakRoom</h1>
+      <form class="regForm well form-horizontal col-xs-4 col-xs-offset-4" action=" " method="post"  id="contact_form">
+        <fieldset>
+
+          <legend class = "register-title" style="text-align: center;">Registration</legend>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="first_name" placeholder="First Name" class="form-control fname"  type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="last_name" placeholder="Last Name" class="form-control lname"  type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="email" placeholder="Email" class="form-control email"  type="email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="password" placeholder="Password" class="form-control password"  type="password">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-4 col-xs-offset-4">
+              <button type="submit" class="btn btn-success reg-button">Register</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-4 control-label">Have an account?</label>
+            <div class="col-xs-4">
+              <button type="submit" class="btn btn-info regLogin">Login</button>
+            </div>
+          </div>
+
+
+        </fieldset>
+      </form>
+
+      <!--Login Screen!-->
+      <form class="loginForm well form-horizontal col-xs-4 col-xs-offset-4" action=" " method="post"  id="login_form">
+        <fieldset>
+          <legend class = "register-title" style="text-align: center;">Login</legend>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="email" placeholder="Email" class="form-control emailLogin"  type="email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6 inputGroupContainer col-xs-offset-3">
+              <div class="input-group">
+                <input  name="password" placeholder="Password" class="form-control passwordLogin"  type="password">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-4 col-xs-offset-4">
+              <button type="submit" class="btn btn-info loginButton">Login</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-4 col-xs-offset-4">
+              <button type="submit" class="btn btn-success loginReg">Register</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+
+
+      <div class = "newPostBar col-xs-6 col-xs-offset-3 text-center">
+        <input  name="input" placeholder="What's your status?" class="form-control postBar"  type="text">
+        <button type="submit" class="btn btn-primary newPost" >New Post</button>
+      </div>
+
+      <div class = "all-posts-container">
+
+
+      </div>
+
+      <div class="col-xs-2 col-xs-offset-5 text-center">
+        <button type="submit" class="btn btn-primary showMore">Show More</button>
+      </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <!-- JavaScript files for Bootstrap -->
+    <!-- UNCOMMENT IF NEEDED -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <!-- underscoreJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
