@@ -18,6 +18,7 @@ $('.regForm').hide();
 $('.showMore').hide();
 $('.newPostBar').hide();
 $('.all-posts-container').hide();
+$('.logoutDiv').hide();
 
 var interval = window.setInterval(refresh, 30000);
 
@@ -95,6 +96,35 @@ $('.all-posts-container').on('click', '.makeComment',function(event){
   let update = Number(array[1]) + 1;
   $(this).siblings('.replies').text('Replies ' + update);
 });
+
+$('.logout').on('click',function(event){
+  event.preventDefault();
+  logoutUser();
+});
+
+function logoutUser(){
+  $.ajax({
+    url: 'https://horizons-facebook.herokuapp.com/api/1.0/users/logout',
+    method: 'GET',
+    data: {
+      token: localStorage.getItem('token')
+    },
+    success: function(posts){
+      console.log('Logout Success', posts);
+      $('.regForm').hide();
+      $('.showMore').hide();
+      $('.newPostBar').hide();
+      $('.all-posts-container').hide();
+      $('.logoutDiv').hide();
+      $('.loginForm').show();
+    },
+    error: function(err){
+      console.log('Uh oh!', err);
+    }
+  })
+}
+
+
 
 function updatePost(postId, postSet){
   $.ajax({
@@ -284,6 +314,7 @@ function loadPage(postSet){
       console.log('Page Loaded!', posts);
       $('.showMore').show();
       $('.all-posts-container').show();
+      $('.logoutDiv').show();
       addPosts(posts.response);
       postPage++;
     },
